@@ -1,0 +1,1 @@
+<?phpfunction formatUrl($url){		global $SCRIPT,$ENV;	if($url=='<front>')	{		$url='';	}	if($ENV['run_mode']=='pragyapattern')	{		$src = str_replace("/pragyapattern","",$SCRIPT['path']);	}	else	{		$src = $SCRIPT['path'];	}	if(substr($url,0,4)=="http")	{		return $url;	}	$url = $src."/".$url;	return $url;}?>
